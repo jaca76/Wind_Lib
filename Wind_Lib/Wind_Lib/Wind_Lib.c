@@ -7,6 +7,12 @@
 
 
 #include <avr/io.h>
+#include <avr/interrupt.h>
+void PCINT_Init(void){
+	PCMSK0 |= (1<<PCINT1); //pin32
+	PCMSK1 |= (1<<PCINT8);//pin28
+	PCICR |= (1<<PCIE0);
+}
 
 void ADC_Init(void){
 	ADMUX|=(1<<REFS0); // napiecie odniesienia VCC
@@ -30,4 +36,11 @@ uint8_t ADC_Wynik (void){
 		else {
 			return 0;
 		}
+}
+ISR( PCINT0_vect ) {
+   //obs³uga dla nó¿ki
+}
+
+ISR( PCINT1_vect ) {
+   //obs³uga dla nó¿ki
 }

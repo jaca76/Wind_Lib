@@ -5,11 +5,12 @@
  *      Author: Jacek
  */
 
-#ifndef ADC_LIB_ADC_LIB_H_
-#define ADC_LIB_ADC_LIB_H_
+#ifndef WIND_LIB_WIND_LIB_H_
+#define WIND_LIB_WIND_LIB_H_
 
 void ADC_Init(void);
 void ADC_Start(void);
 uint8_t ADC_Wynik (void);
+void PCINT_Init(void);
 
-#endif /* ADC_LIB_ADC_LIB_H_ */
+#endif /* WIND_LIB_WIND_LIB_H_ */

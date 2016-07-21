@@ -13,7 +13,7 @@
 #include <avr/interrupt.h>
 #include <util/delay.h>
 #include "UART/uart.h"
-#include "ADC_Lib/ADC_Lib.h"
+#include "Wind_Lib/Wind_Lib.h"
 uint8_t wynik;
 int main(void)
 {
